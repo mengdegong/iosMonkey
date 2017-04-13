@@ -28,9 +28,8 @@ class monkey():
                 		"           #######################################"
 
         print '\n[ INFO ]---------------------------------------------------'
-        print '[ INFO ]测试设备: %s \n[INFO]测试App : %s' %(configure.udid,configure.bundleId)
+        print '[ INFO ]测试设备: %s \n[ INFO ]测试App : %s' %(configure.udid,configure.bundleId)
         print '[ INFO ]---------------------------------------------------\n'
-
         try:
             monkey().run_event()
         except Exception ,e:
@@ -111,16 +110,15 @@ class monkey():
            self.driver.init()
            return self.driver
         except Exception ,e:
-            print "\n[ ERROR ]---------------------------------------------------" +\
-                    "\n[ ERROR ]请在命令行输入 macaca server --verbose 启动服务\n" +\
-                    "[ ERROR ]---------------------------------------------------\n"
+            print "\n[ ERROR ] ---------------------------------------------------" +\
+                    "\n[ ERROR ] macaca server 启动失败\n"+\
+                    "[ ERROR ] ---------------------------------------------------\n"
         #守护进程
-        finally:
-            print ''
-
-            self.driver.init()
-            time.sleep(5)
-            monkey().run_event()
+        # finally:
+        #     self.driver.init()
+        #     time.sleep(5)
+        #     monkey().run_event()
+        #     print '[ RUN ] 守护进程启动成功'
 
 
 
