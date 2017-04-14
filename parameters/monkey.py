@@ -54,42 +54,32 @@ class monkey():
 
         special_point_x = width / 2
         special_point_y = int(height * 0.94)
+
         while True:
             num = random_math().percentage_random()
             if  num ==0:
                 tap_event(driver, width, height)
-                eventfun = eventfun + 1
-                print '[ RUN ] Event number:  %d ' %eventfun
 
             elif num ==1 :
                 swipe_event(driver, width, height)
-                eventfun = eventfun + 1
-                print '[ RUN ] Event number:  %d ' %eventfun
 
             elif num ==2 :
                 bake_event(driver, self.backX, self.backY)
-                eventfun = eventfun + 1
-                print '[ RUN ] Event number:  %d ' %eventfun
 
             elif num ==3 :
                 submit_event(driver, submitX_max, submitX_mim, submitY_max, submitY_mim)
-                eventfun = eventfun + 1
-                print '[ RUN ] Event number:  %d ' %eventfun
 
             elif num ==4 :
                 content_event(driver, contentX_max, contentX_mim, contentY_max, contentY_mim)
-                eventfun = eventfun + 1
-                print '[ RUN ] Event number:  %d ' %eventfun
 
             elif num == 5 :
                 tap_point_event(driver, special_point_x, special_point_y)
-                eventfun = eventfun + 1
-                print '[ RUN ] Event number:  %d ' %eventfun
 
             elif num == 6:
                 share_event(driver, width)
-                eventfun = eventfun + 1
-                print '[ RUN ] Event number:  %d ' %eventfun
+
+            eventfun = eventfun + 1
+            print '[ RUN ] Event number:  %d ' %eventfun
 
 
     def start(self):
@@ -113,8 +103,10 @@ class monkey():
             print "\n[ ERROR ] ---------------------------------------------------" +\
                     "\n[ ERROR ] macaca server 启动失败\n"+\
                     "[ ERROR ] ---------------------------------------------------\n"
-        #守护进程
+
+        # 守护进程
         # finally:
+        #     print '8888'
         #     self.driver.init()
         #     time.sleep(5)
         #     monkey().run_event()

@@ -5,10 +5,10 @@ __author__ = 'mengdegong'
 '''
     配置信息
 '''
-bundleId = 'com.bluecity.blued.qy'
+bundleId = 'com.blued.international'
 port = 3456
 proxy = 8900
-udid = 'bad980986e328c37e478edcc81c552d291ce4024'
+udid = '37adc1f3a175fe056046dc239b68d28d96d47c2f'
 version = '10.2.1'
 
 
