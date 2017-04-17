@@ -1,7 +1,6 @@
 **1,功能**
 1.可以模拟android monkey执行的方式，在IOS APP页面点击 滑动操等作,支持 ios 9和ios10
 2,支持一台ios执行
-下载地址:http://git.oschina.net/lvduoqiang/Blued-tools
 
 **2,准备macaca环境**
 安装usbmuxd
