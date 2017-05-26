@@ -7,8 +7,8 @@ __author__ = 'mengdegong'
 '''
 bundleId = 'com.blued.international'
 port = 3456
-proxy = 8900
-udid = '37adc1f3a175fe056046dc239b68d28d96d47c2f'
+proxy = 8001
+udid = '053288d1e59d03a3802b90237f01d53cc0d4378b'
 version = '10.2.1'
 
 
