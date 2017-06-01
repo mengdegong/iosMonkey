@@ -24,6 +24,8 @@ EVELOPMENT_TEAM_ID=需要填写TeamID npm install macaca-ios -g
 ```
 $ macaca doctor
 ```
+附加安装macaca教程，可作参考
+http://www.cnblogs.com/jassa/p/6674142.html
 
 **3,WebDriverAgent项目重签名**
 安装app-inspector
