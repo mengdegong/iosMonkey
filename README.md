@@ -7,11 +7,11 @@
 ```
 $ brew install usbmuxd
 ```
-安装iso-webkit-debug-proxy
+安装ios-webkit-debug-proxy
 ```
-$ brew install iso-webkit-debug-proxy
+$ brew install ios-webkit-debug-proxy
 ```
-安装iso-deploy
+安装ios-deploy
 ```
 $ npm i ios-deploy -g
 ```
