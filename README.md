@@ -7,11 +7,11 @@
 ```
 $ brew install usbmuxd
 ```
-安装ios-webkit-debug-proxy
+安装iso-webkit-debug-proxy
 ```
-$ brew install ios-webkit-debug-proxy
+$ brew install iso-webkit-debug-proxy
 ```
-安装ios-deploy
+安装iso-deploy
 ```
 $ npm i ios-deploy -g
 ```
@@ -24,8 +24,6 @@ EVELOPMENT_TEAM_ID=需要填写TeamID npm install macaca-ios -g
 ```
 $ macaca doctor
 ```
-附加安装macaca教程，可作参考
-https://testerhome.com/topics/6507
 
 **3,WebDriverAgent项目重签名**
 安装app-inspector
