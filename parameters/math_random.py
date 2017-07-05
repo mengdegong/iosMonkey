@@ -14,6 +14,7 @@ class random_math():
         self.EVENT_TYPE_CONTENT = CONTENT
         self.EVENT_TYPE_SPECIAL_POINT = POINT
         self.EVENT_TYPE_SHARE = SHARE
+        self.EVENT_TYPE_HOME = HOME
 
     def percentage_random(self):
         random_number = random.random()
@@ -35,4 +36,8 @@ class random_math():
                 + self.EVENT_TYPE_SPECIAL_POINT <= random_number <= self.EVENT_TYPE_TAP + self.EVENT_TYPE_SWIPE + self.EVENT_TYPE_BACK + self.EVENT_TYPE_SUBMIT \
                         + self.EVENT_TYPE_CONTENT + self.EVENT_TYPE_SPECIAL_POINT + self.EVENT_TYPE_SHARE:
             return 6
+        elif self.EVENT_TYPE_TAP + self.EVENT_TYPE_SWIPE + self.EVENT_TYPE_BACK + self.EVENT_TYPE_SUBMIT + self.EVENT_TYPE_CONTENT \
+                + self.EVENT_TYPE_SPECIAL_POINT + self.EVENT_TYPE_SHARE <= random_number <= self.EVENT_TYPE_TAP + self.EVENT_TYPE_SWIPE + self.EVENT_TYPE_BACK + self.EVENT_TYPE_SUBMIT \
+                        + self.EVENT_TYPE_CONTENT + self.EVENT_TYPE_SPECIAL_POINT + self.EVENT_TYPE_SHARE + self.EVENT_TYPE_HOME:
+            return 7
         return -1

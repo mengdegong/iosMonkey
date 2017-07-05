@@ -30,6 +30,7 @@ class monkey():
         print '\n[ INFO ]---------------------------------------------------'
         print '[ INFO ]测试设备: %s \n[ INFO ]测试App : %s' %(configure.udid,configure.bundleId)
         print '[ INFO ]---------------------------------------------------\n'
+        os.system('pkill -9 proxy')
         try:
             monkey().run_event()
         except Exception ,e:
@@ -38,7 +39,7 @@ class monkey():
                         "[ ERROR ]---------------------------------------------------"
 
     def run_event(self):
-        driver = monkey().start()
+        driver = monkey().start
         eventfun = 0
         width = driver.get_window_size().get('width')
         height = driver.get_window_size().get('height')
@@ -77,28 +78,35 @@ class monkey():
 
             elif num == 6:
                 share_event(driver, width)
+            elif num == 7:
+                home_event(driver, udid, bundleId)
 
             eventfun = eventfun + 1
             print '[ RUN ] Event number:  %d ' %eventfun
 
 
+    @property
     def start(self):
         porps = {}
         server = {}
 
         porps['platformName'] = 'iOS'
         porps['platformVersion'] = configure.version
+        porps['deviceName'] = 'iPhone 6s'
+        porps['autoAcceptAlerts'] = True
         porps['udid'] = configure.udid
         porps['bundleId'] = configure.bundleId
-        porps['proxyPort'] = configure.proxy
+        # porps['proxyPort'] = configure.proxy
 
         server['hostname'] = '127.0.0.1'
         server['port'] = configure.port
 
         try:
-           self.driver = WebDriver(porps, server)
-           self.driver.init()
-           return self.driver
+            print porps
+            print server
+            self.driver = WebDriver(porps, server)
+            self.driver.init()
+            return self.driver
         except Exception ,e:
             print "\n[ ERROR ] ---------------------------------------------------" +\
                     "\n[ ERROR ] macaca server 启动失败\n"+\
