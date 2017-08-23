@@ -14,6 +14,7 @@ from mk_event.mk_content import *
 from mk_event.mk_bake import *
 from mk_event.mk_tap_special_point import *
 from mk_event.mk_share import *
+from parameters.run_server import *
 
 class monkey():
     def __init__(self):
@@ -31,7 +32,10 @@ class monkey():
         print '[ INFO ]测试设备: %s \n[ INFO ]测试App : %s' %(configure.udid,configure.bundleId)
         print '[ INFO ]---------------------------------------------------\n'
         os.system('pkill -9 proxy')
+        os.system('pkill -9 node')
         try:
+            r = RunServer(port)
+            r.start()
             monkey().run_event()
         except Exception ,e:
             print "\n[ ERROR ]---------------------------------------------------\n" +\
